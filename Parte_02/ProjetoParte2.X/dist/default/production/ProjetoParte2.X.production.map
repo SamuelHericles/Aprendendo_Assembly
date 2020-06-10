@@ -1,0 +1,54 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Sun May 17 22:13:00 2020
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                 RES_VECT       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                MAIN_PROG       code   0x000006    program   0x000062
+.config_300001_BUILD/DEFAULT/PRODUCTION/PARTE02    romdata   0x300001    program   0x000001
+.config_300003_BUILD/DEFAULT/PRODUCTION/PARTE02    romdata   0x300003    program   0x000001
+.config_300006_BUILD/DEFAULT/PRODUCTION/PARTE02    romdata   0x300006    program   0x000001
+                VARIAVEIS      udata   0x000000       data   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000067      
+                            0x300001    0x300001      
+                            0x300003    0x300003      
+                            0x300006    0x300006      
+            107 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   ATRASO   0x000058    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                     LOOP   0x00000a    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                   REPETE   0x00005c    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                 REPETE_2   0x000050    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                    START   0x000006    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                SUBATRASO   0x00004c    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                  CONTA01   0x000000       data     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                  CONTA02   0x000001       data     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000006    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                     LOOP   0x00000a    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                SUBATRASO   0x00004c    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                 REPETE_2   0x000050    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                   ATRASO   0x000058    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                   REPETE   0x00005c    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                  CONTA01   0x000000       data     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+                  CONTA02   0x000001       data     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_02/ProjetoParte2.X/parte02.asm
+
+

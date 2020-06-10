@@ -1,0 +1,42 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Sun May 17 22:12:39 2020
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                 RES_VECT       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                MAIN_PROG       code   0x000006    program   0x000010
+                VARIAVEIS      udata   0x000000       data   0x000004
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000015      
+            22 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000006    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_01/Exercicio01.X/Exercicio01.asm
+          _MAIN_PROG_000C   0x000012    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_01/Exercicio01.X/Exercicio01.asm
+                        A   0x000000       data     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_01/Exercicio01.X/Exercicio01.asm
+                        B   0x000001       data     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_01/Exercicio01.X/Exercicio01.asm
+                        C   0x000002       data     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_01/Exercicio01.X/Exercicio01.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000006    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_01/Exercicio01.X/Exercicio01.asm
+          _MAIN_PROG_000C   0x000012    program     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_01/Exercicio01.X/Exercicio01.asm
+                        A   0x000000       data     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_01/Exercicio01.X/Exercicio01.asm
+                        B   0x000001       data     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_01/Exercicio01.X/Exercicio01.asm
+                        C   0x000002       data     static /home/sh/Área de trabalho/Trabalho_01_SAMUEL_HERICLES_389118/Parte_01/Exercicio01.X/Exercicio01.asm
+
+

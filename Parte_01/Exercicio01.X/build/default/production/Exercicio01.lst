@@ -1,0 +1,67 @@
+MPASM 5.87  /HOME/SH/√ÅREA DE TRABALHO/TRABA   5-17-2020  19:12:39         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;   UNIVERSIDADE FEDERAL DO CEAR¡
+                      00002 ;   ALUNO: SAMUEL HERICLES SOUZA SILVEIRA
+                      00003 ;   MATRÕCULA: 389118
+                      00004 ;   PROFESSOR: MARCELO SOUZA
+                      00005 ;   DATA: 10/05/2020
+                      00006 
+                      00007 ; -Parte 1-    
+                      00008 ;   1. Desenvolva um programa que calcula a soma dos valores em duas vari·veis 
+                      00009 ;      de memÛria de 16 bits e armazene o resultado em uma terceira vari·vel 
+                      00010 ;      tambÈm de 16 bits.   
+                      00011     
+                      00012 ;#########################
+                      00013 ; DeclaraÁ„o das variavÈis
+                      00014 ;#########################
+                      00015 VARIAVEIS UDATA_ACS 0
+Warning[207]: Found label after column 1. (A)
+000000                00016   A RES 1                   ; Variavel de tamanho de 8 bits no endereÁo 0x00
+Warning[207]: Found label after column 1. (B)
+000001                00017   B RES 1                   ; Variavel de tamanho de 8 bits no endereÁo 0x01
+Warning[207]: Found label after column 1. (C)
+000002                00018   C RES 2                   ; Variavel de tamanho de 16 bits no endereÁo 0x02
+                      00019 
+                      00020 ;#########################
+                      00021 ; InÌcio do cÛdigo
+                      00022 ;######################### 
+                      00023 RES_VECT  CODE    0x0000            
+000000 EF?? F???      00024     GOTO    START                   
+                      00025 
+                      00026 ;===============================================================================    
+                      00027 MAIN_PROG CODE                     
+                      00028 
+000000                00029 START                       ; InÌcio dos testes
+000000 0E32           00030     MOVLW .50               ; Move 50 literal para memÛria
+000002 6E??           00031     MOVWF A                 ; Inseri o valor na var W na var A
+000004 6E??           00032     MOVWF B                 ; Inseri o valor na var W na var B
+                      00033     
+                      00034     ; Soma C = A+B
+000006 50??           00035     MOVF B,W                ; Move o valor na memoria para o registrador B
+000008 24??           00036     ADDWF A,W               ; Soma e armazena o resultado na memÛria
+00000A 6E??           00037     MOVWF C                 ; Veja o resultado em 0x03 no file registers
+                      00038     
+00000C EF?? F???      00039     GOTO $                  ; Veja o resultado na aba File Registers
+                      00040     END
+MPASM 5.87  /HOME/SH/√ÅREA DE TRABALHO/TRABA   5-17-2020  19:12:39         PAGE  2
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+A                                 00000000
+B                                 00000001
+C                                 00000002
+START                             00000000
+_MAIN_PROG_000C                   0000000C
+__18F4550                         00000001
+
+Errors   :     0
+Warnings :     3 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+

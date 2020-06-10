@@ -1,0 +1,162 @@
+MPASM 5.87  /HOME/SH/√ÅREA DE TRABALHO/TRABA   5-17-2020  19:12:53         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;   UNIVERSIDADE FEDERAL DO CEAR¡
+                      00002 ;   ALUNO: SAMUEL HERICLES SOUZA SILVEIRA
+                      00003 ;   MATRÕCULA: 389118
+                      00004 ;   PROFESSOR: MARCELO SOUZA
+                      00005 ;   DATA: 10/05/2020
+                      00006     
+                      00007 ; -Parte 1-        
+                      00008 ;   3. Desenvolva um programa que calcule a soma dos 4 bits menos significativos
+                      00009 ;      com os 4 bits mais significativos de uma vari·vel de memÛria de 8 bits.
+                      00010 ;      O resultado deve ser armazenado em outra vari·vel.
+                      00011 
+                      00012 ; nible -> sequÍncia de 4 bits. Ex: 0000 0000 , aqui possui dois nibles    
+                      00013     
+                      00014 ;#########################
+                      00015 ; DeclaraÁ„o das variavÈis
+                      00016 ;#########################
+                      00017 VARIAVEIS UDATA_ACS 0
+Warning[207]: Found label after column 1. (a)
+000000                00018   a     RES 1               ; Variavel de tamanho de 8 bits no endereÁo 0x00
+Warning[207]: Found label after column 1. (resp)
+000001                00019   resp  RES 1               ; Variavel de tamanho de 8 bits no endereÁo 0x01    
+Warning[207]: Found label after column 1. (nb_1)
+000002                00020   nb_1  RES 1               ; Variavel de tamanho de 8 bits no endereÁo 0x02    
+Warning[207]: Found label after column 1. (nb_2)
+000003                00021   nb_2  RES 1               ; Variavel de tamanho de 8 bits no endereÁo 0x03    
+                      00022 
+                      00023 
+                      00024 ;#########################
+                      00025 ; InÌcio do cÛdigo
+                      00026 ;######################### 
+                      00027 RES_VECT  CODE    0x0000            
+000000 EF?? F???      00028     GOTO    START       
+                      00029     
+                      00030 ;===============================================================================
+                      00031 MAIN_PROG CODE                       
+                      00032 
+000000                00033 TESTE_0             ; Primeiro teste, testa o bit pos 0
+000000 A0??           00034  BTFSS a,0          ; Verifica se o bit pos 0 tem valor '1'
+000002 EF?? F???      00035  GOTO TESTE_1       ; Se chegou aqui È porque o valor do bit È '0'
+000006 0F01           00036  ADDLW b'00000001'  ; Soma a memÛria '0000 0001'
+000008 EF?? F???      00037  GOTO TESTE_1       ; Se chegou aqui È porque o valor do bit È '1'
+                      00038  
+00000C                00039 TESTE_1             ; Segundo teste, testa o bit pos 0
+00000C A2??           00040  BTFSS a,1          ; Verifica se o bit pos 1 tem valor '1'
+00000E EF?? F???      00041  GOTO TESTE_2       ; Se chegou aqui È porque o valor do bit È '0'
+000012 0F02           00042  ADDLW b'00000010'  ; Soma a memÛria '0000 0010'
+000014 EF?? F???      00043  GOTO TESTE_2       ; Se chegou aqui È porque o valor do bit È '1'
+                      00044 
+000018                00045 TESTE_2             ; Terceiro teste, testa o bit pos 0
+000018 A4??           00046  BTFSS a,2          ; Verifica se o bit pos 2 tem valor '1'
+00001A EF?? F???      00047  GOTO TESTE_3       ; Se chegou aqui È porque o valor do bit È '0'
+00001E 0F04           00048  ADDLW b'00000100'  ; Soma a memÛria '0000 0100'
+000020 EF?? F???      00049  GOTO TESTE_3       ; Se chegou aqui È porque o valor do bit È '1'
+MPASM 5.87  /HOME/SH/√ÅREA DE TRABALHO/TRABA   5-17-2020  19:12:53         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00050  
+000024                00051 TESTE_3             ; Quarto teste, testa o bit pos 0
+000024 A6??           00052  BTFSS a,3          ; Verifica se o bit pos 3 tem valor '1'
+000026 EF?? F???      00053  GOTO Nible_1       ; Se chegou aqui È porque o valor do bit È '0'
+00002A 0F08           00054  ADDLW b'00001000'  ; Soma a memÛria '0000 1000'
+00002C EF?? F???      00055  GOTO Nible_1       ; Se chegou aqui È porque o valor do bit È '1'
+                      00056 
+000030                00057 Nible_1             ; Guarda os resultados dos primeiros quatro teste
+000030 6E??           00058     movwf nb_1      ; Armazena o resulto na variavel nb_1
+000032 0E00           00059     movlw .0        ; 'limpa' a memÛria
+000034 EF?? F???      00060     GOTO TESTE_4    ; Redireciona para o teste 4
+                      00061  
+                      00062 ;===============================================================================
+                      00063     
+000038                00064 TESTE_4             ; Quinto teste, testa o bit pos 0
+000038 A8??           00065  BTFSS a,4          ; Verifica se o bit pos 4 tem valor '1'
+00003A EF?? F???      00066  GOTO TESTE_5       ; Se chegou aqui È porque o valor do bit È '0'
+00003E 0F01           00067  ADDLW b'00000001'  ; Soma a memÛria '0001 0000'
+000040 EF?? F???      00068  GOTO TESTE_5       ; Se chegou aqui È porque o valor do bit È '1'
+                      00069 
+000044                00070 TESTE_5             ; Sexto teste, testa o bit pos 0
+000044 AA??           00071  BTFSS a,5          ; Verifica se o bit pos 5 tem valor '1'
+000046 EF?? F???      00072  GOTO TESTE_6       ; Se chegou aqui È porque o valor do bit È '0'
+00004A 0F02           00073  ADDLW b'00000010'  ; Soma a memÛria '0010 0000'
+00004C EF?? F???      00074  GOTO TESTE_6       ; Se chegou aqui È porque o valor do bit È '1'
+                      00075 
+000050                00076 TESTE_6             ; SÈtimo teste, testa o bit pos 0
+000050 AC??           00077  BTFSS a,6          ; Verifica se o bit pos 6 tem valor '1'
+000052 EF?? F???      00078  GOTO TESTE_7       ; Se chegou aqui È porque o valor do bit È '0'
+000056 0F04           00079  ADDLW b'00000100'  ; Soma a memÛria '0100 0000'
+000058 EF?? F???      00080  GOTO TESTE_7       ; Se chegou aqui È porque o valor do bit È '1'
+                      00081  
+00005C                00082 TESTE_7             ; Oitavo teste, testa o bit pos 0
+00005C AE??           00083  BTFSS a,7          ; Verifica se o bit pos 7 tem valor '1'
+00005E EF?? F???      00084  GOTO Nible_2       ; Se chegou aqui È porque o valor do bit È '0'
+000062 0F08           00085  ADDLW b'00001000'  ; Soma a memÛria '1000 0000'
+000064 EF?? F???      00086  GOTO Nible_2       ; Se chegou aqui È porque o valor do bit È '1'
+                      00087  
+000068                00088 Nible_2             ; Guarda os resultados dos ˙ltimos quatro teste
+000068 6E??           00089   movwf nb_2        ; Armazena o valor da memÛria na variavel nb_2
+00006A EF?? F???      00090   GOTO SOMA         ; Redireciona para somar os dois nibles
+                      00091 ;===============================================================================
+                      00092 
+00006E                00093 START                       ; InÌcio dos testes 
+                      00094     ; Coloquei essa variavel para testar com todos os bits
+00006E 0EFF           00095     movlw b'11111111' 
+000070 6E??           00096     movwf a                 ; Armazena o valor da memoria no registrador                   
+                      00097     ;clrw -> N„o est· funcionando(MPLAB Linux, Fedora 31(SO que estou usando))
+000072 0E00           00098     movlw .0                ; Forma para 'limpar' a memÛria que fiz
+000074 EF?? F???      00099     GOTO TESTE_0            ; InÌcio do primeiro teste
+                      00100 
+                      00101 
+000078                00102 SOMA                        ; FunÁ„o que soma os dois nibles
+MPASM 5.87  /HOME/SH/√ÅREA DE TRABALHO/TRABA   5-17-2020  19:12:53         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+000078 0E00           00103     movlw .0                ; 'limpa' a memÛria
+00007A 50??           00104     movf nb_1,w             ; Armazena o valor do nb_1 na memÛria
+00007C 24??           00105     addwf nb_2,w            ; Soma o valor da memÛria como nb_2 e reinsere em w
+00007E 6E??           00106     movwf resp              ; Armazena o valor da soma nb_1+nb_2 na var resp
+000080 EF?? F???      00107     GOTO $                  ; Veja o resultado na aba File Registers pos 0x03
+                      00108                             ; O RESULTADO … EM HEXADECIMAL!!!
+Warning[205]: Found directive in column 1. (END)
+                      00109 END
+MPASM 5.87  /HOME/SH/√ÅREA DE TRABALHO/TRABA   5-17-2020  19:12:53         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+Nible_1                           00000030
+Nible_2                           00000068
+SOMA                              00000078
+START                             0000006E
+TESTE_0                           00000000
+TESTE_1                           0000000C
+TESTE_2                           00000018
+TESTE_3                           00000024
+TESTE_4                           00000038
+TESTE_5                           00000044
+TESTE_6                           00000050
+TESTE_7                           0000005C
+_MAIN_PROG_0080                   00000080
+__18F4550                         00000001
+a                                 00000000
+nb_1                              00000002
+nb_2                              00000003
+resp                              00000001
+
+Errors   :     0
+Warnings :     5 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+

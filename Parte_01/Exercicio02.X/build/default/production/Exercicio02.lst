@@ -1,0 +1,128 @@
+MPASM 5.87  /HOME/SH/√ÅREA DE TRABALHO/TRABA   5-17-2020  19:12:46         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;   UNIVERSIDADE FEDERAL DO CEAR¡
+                      00002 ;   ALUNO: SAMUEL HERICLES SOUZA SILVEIRA
+                      00003 ;   MATRÕCULA: 389118
+                      00004 ;   PROFESSOR: MARCELO SOUZA
+                      00005 ;   DATA: 10/05/2020
+                      00006 
+                      00007 ; -Parte 1-    
+                      00008 ;   2. Desenvolva um programa que conte a quantidade de bits '1' existentes no 
+                      00009 ;      valor armazenado em uma vari·vel de memÛria de 8 bits e guarde o resulta-
+                      00010 ;      do em outra vari·vel de memÛria tambÈm de 8 bits.    
+                      00011     
+                      00012 ;#########################
+                      00013 ; DeclaraÁ„o das variavÈis
+                      00014 ;#########################
+                      00015 VARIAVEIS UDATA_ACS 0
+Warning[207]: Found label after column 1. (a)
+000000                00016   a     RES 1               ; Variavel de tamanho de 8 bits no endereÁo 0x00
+Warning[207]: Found label after column 1. (resp)
+000001                00017   resp  RES 1               ; Variavel de tamanho de 8 bits no endereÁo 0x01
+                      00018  
+                      00019 ;#########################
+                      00020 ; InÌcio do cÛdigo
+                      00021 ;#########################  
+                      00022 RES_VECT  CODE    0x0000  
+000000 EF?? F???      00023     GOTO    START                   
+                      00024 
+                      00025 ;===============================================================================                    
+                      00026 MAIN_PROG CODE 
+                      00027  
+000000                00028 TESTE_0         ; Teste para o primeiro bit armazenado no registrador
+000000 A0??           00029  BTFSS a,0      ; Verifica o valor do bit posiÁ„o 0, se tem valor 0
+000002 EF?? F???      00030  GOTO TESTE_1   ; Se o valor do bit for '0' pula para o teste 1
+000006 2A??           00031  incf resp      ; Soma +1 no registrador dee nomeado como 'resp'
+000008 EF?? F???      00032  GOTO TESTE_1   ; Se chegou nesta linha È porque o bit tem valor '1'
+                      00033 
+                      00034 
+00000C                00035 TESTE_1         ; Teste para o segundo bit armazenado no registrador
+00000C A2??           00036  BTFSS a,1      ; Verifica o valor do bit posiÁ„o 0, se tem valor 1
+00000E EF?? F???      00037  GOTO TESTE_2   ; Se o valor do bit for '0' pula para o teste 2
+000012 2A??           00038  incf resp      ; Soma +1 no registrador dee nomeado como 'resp'
+000014 EF?? F???      00039  GOTO TESTE_2   ; Se chegou nesta linha È porque o bit tem valor '1'
+                      00040 
+                      00041 
+000018                00042 TESTE_2         ; Teste para o terceito bit armazenado no registrador
+000018 A4??           00043  BTFSS a,2      ; Verifica o valor do bit posiÁ„o 0, se tem valor 2
+00001A EF?? F???      00044  GOTO TESTE_3   ; Se o valor do bit for '0' pula para o teste 3
+00001E 2A??           00045  incf resp      ; Soma +1 no registrador dee nomeado como 'resp'
+000020 EF?? F???      00046  GOTO TESTE_3   ; Se chegou nesta linha È porque o bit tem valor '1'
+                      00047 
+                      00048 
+000024                00049 TESTE_3         ; Teste para o quarto bit armazenado no registrador
+000024 A6??           00050  BTFSS a,3      ; Verifica o valor do bit posiÁ„o 0, se tem valor 3
+000026 EF?? F???      00051  GOTO TESTE_4   ; Se o valor do bit for '0' pula para o teste 4
+MPASM 5.87  /HOME/SH/√ÅREA DE TRABALHO/TRABA   5-17-2020  19:12:46         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00002A 2A??           00052  incf resp      ; Soma +1 no registrador dee nomeado como 'resp'
+00002C EF?? F???      00053  GOTO TESTE_4   ; Se chegou nesta linha È porque o bit tem valor '1'
+                      00054  
+                      00055 
+000030                00056 TESTE_4         ; Teste para o quinto bit armazenado no registrador
+000030 A8??           00057  BTFSS a,4      ; Verifica o valor do bit posiÁ„o 0, se tem valor 4
+000032 EF?? F???      00058  GOTO TESTE_5   ; Se o valor do bit for '0' pula para o teste 5
+000036 2A??           00059  incf resp      ; Soma +1 no registrador dee nomeado como 'resp'
+000038 EF?? F???      00060  GOTO TESTE_5   ; Se chegou nesta linha È porque o bit tem valor '1'
+                      00061  
+00003C                00062 TESTE_5         ; Teste para o sexto bit armazenado no registrador
+00003C AA??           00063  BTFSS a,5      ; Verifica o valor do bit posiÁ„o 0, se tem valor 5
+00003E EF?? F???      00064  GOTO TESTE_6   ; Se o valor do bit for '0' pula para o teste 6
+000042 2A??           00065  incf resp      ; Soma +1 no registrador dee nomeado como 'resp'
+000044 EF?? F???      00066  GOTO TESTE_6   ; Se chegou nesta linha È porque o bit tem valor '1'
+                      00067 
+000048                00068 TESTE_6         ; Teste para o sÈtimo bit armazenado no registrador
+000048 AC??           00069  BTFSS a,6      ; Verifica o valor do bit posiÁ„o 0, se tem valor 6
+00004A EF?? F???      00070  GOTO TESTE_7   ; Se o valor do bit for '0' pula para o teste 7
+00004E 2A??           00071  incf resp      ; Soma +1 no registrador dee nomeado como 'resp'
+000050 EF?? F???      00072  GOTO TESTE_7   ; Se chegou nesta linha È porque o bit tem valor '1'
+                      00073  
+                      00074 
+000054                00075 TESTE_7         ; Teste para o oitavo bit armazenado no registrador 
+000054 AE??           00076  BTFSS a,7      ; Verifica o valor do bit posiÁ„o 0, se tem valor 7
+000056 EF?? F???      00077  GOTO $         ; Veja o resultado na aba File Registers no endereÁo 0x01
+00005A 2A??           00078  incf resp      ; Soma +1 no registrador dee nomeado como 'resp'
+00005C EF?? F???      00079  GOTO $         ; Veja o resultado na aba File Registers no endereÁo 0x01
+                      00080  
+                      00081 ;=============================================================================== 
+000060                00082 START                   ; InÌcio dos testes
+                      00083     ; Coloquei valor boleano para fizar mais facil ver, mas pode ser literal
+000060 0EB4           00084     movlw b'10110100'   
+000062 6E??           00085     movwf a             ; Move o valor na memÛria para o registrador
+000064 EF?? F???      00086     GOTO TESTE_0        ; Redireciona para o primeiro teste 
+Warning[205]: Found directive in column 1. (END)
+                      00087 END
+MPASM 5.87  /HOME/SH/√ÅREA DE TRABALHO/TRABA   5-17-2020  19:12:46         PAGE  3
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+START                             00000060
+TESTE_0                           00000000
+TESTE_1                           0000000C
+TESTE_2                           00000018
+TESTE_3                           00000024
+TESTE_4                           00000030
+TESTE_5                           0000003C
+TESTE_6                           00000048
+TESTE_7                           00000054
+_MAIN_PROG_0056                   00000056
+_MAIN_PROG_005C                   0000005C
+__18F4550                         00000001
+a                                 00000000
+resp                              00000001
+
+Errors   :     0
+Warnings :     3 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+
