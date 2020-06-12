@@ -17,7 +17,7 @@ Já o proteus você irá precisar usar o wine:
 
 * ```http://eletrobere.blogspot.com/2016/06/o-jeito-facil-de-instalar-proteus-no.html```
 
-# Licensa
+# Licença
 
 Código aberto, pois é apenas para fins educaionais
 
