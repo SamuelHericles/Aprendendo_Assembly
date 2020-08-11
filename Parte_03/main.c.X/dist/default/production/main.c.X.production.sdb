@@ -1,0 +1,158 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"4 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"39 C:\Users\desconhecido\Desktop\Trabalho_02_SAMUEL_HERICLES_389118\Projeto_1\main.c.X\timer_regressivo.c
+[v _main main `(i  1 e 2 0 ]
+"53
+[v _atualiza_PORTD atualiza_PORTD `(v  1 e 1 0 ]
+"58
+[v _buzzer buzzer `(v  1 e 1 0 ]
+"67
+[v _conta conta `(v  1 e 1 0 ]
+"88
+[v _inicializar inicializar `(v  1 e 1 0 ]
+"105
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+"2453 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic18f4550.h
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"2705
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+[s S44 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"3657
+[s S53 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+[u S62 . 1 `S44 1 . 1 0 `S53 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES62  1 e 1 @3987 ]
+"4001
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S135 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 INT2IF 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 INT1IE 1 0 :1:3 
+`uc 1 INT2IE 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 INT1IP 1 0 :1:6 
+`uc 1 INT2IP 1 0 :1:7 
+]
+"8440
+[s S144 . 1 `uc 1 INT1F 1 0 :1:0 
+`uc 1 INT2F 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 INT1E 1 0 :1:3 
+`uc 1 INT2E 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 INT1P 1 0 :1:6 
+`uc 1 INT2P 1 0 :1:7 
+]
+[u S153 . 1 `S135 1 . 1 0 `S144 1 . 1 0 ]
+[v _INTCON3bits INTCON3bits `VES153  1 e 1 @4080 ]
+[s S86 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"8614
+[s S95 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S104 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S108 . 1 `S86 1 . 1 0 `S95 1 . 1 0 `S104 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES108  1 e 1 @4082 ]
+"9828
+[v _INT0IF INT0IF `VEb  1 e 0 @32657 ]
+"9843
+[v _INT1IF INT1IF `VEb  1 e 0 @32640 ]
+"10371
+[v _RB4 RB4 `VEb  1 e 0 @31756 ]
+"23 C:\Users\desconhecido\Desktop\Trabalho_02_SAMUEL_HERICLES_389118\Projeto_1\main.c.X\timer_regressivo.c
+[v _disp1 disp1 `uc  1 e 1 0 ]
+[v _disp2 disp2 `uc  1 e 1 0 ]
+"24
+[v _contar contar `uc  1 e 1 0 ]
+"25
+[v _para para `i  1 e 2 0 ]
+"39
+[v _main main `(i  1 e 2 0 ]
+{
+"50
+} 0
+"88
+[v _inicializar inicializar `(v  1 e 1 0 ]
+{
+"103
+} 0
+"67
+[v _conta conta `(v  1 e 1 0 ]
+{
+"86
+} 0
+"58
+[v _buzzer buzzer `(v  1 e 1 0 ]
+{
+[v buzzer@para para `i  1 p 2 0 ]
+"64
+} 0
+"53
+[v _atualiza_PORTD atualiza_PORTD `(v  1 e 1 0 ]
+{
+"55
+} 0
+"105
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+{
+"139
+} 0
